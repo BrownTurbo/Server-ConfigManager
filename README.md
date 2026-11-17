@@ -3,11 +3,6 @@
 ---
 ## Features
 
-- **Native open.mp Component (`IComponent`)**:
-  - Implements the official `open.mp-sdk` with `COMPONENT_ENTRY_POINT()`.
-  - Integrates with `IPawnComponent` and `PawnEventHandler` (`onAmxLoad`) to register Pawn native functions across gamemodes and filterscripts.
-  - Automatically saves all modified configuration files to disk when the server shuts down or restarts.
-  - Interacts with `ICore` for thread-safe server logging (`core->printLn`).
 - **Independent Format Engines**:
   - **JSON Engine (`JsonConfigDocument`)**:
     - Dedicated engine for `config.json` and `.json` documents.
@@ -28,9 +23,6 @@
   - Translates legacy SA-MP directives (`hostname`, `maxplayers`, `port`, `rcon_password`) to open.mp equivalents (`name`, `max_players`, `network.port`, `rcon.password`) and vice-versa seamlessly.
 - **Atomic Disk Persistence**:
   - Staged in-memory changes are flushed safely (`.tmp` write + atomic OS replace) to prevent configuration file corruption on server crashes or power failures.
-- **Modern C++20 & Thread Safety**:
-  - Protected with `std::shared_mutex` for concurrent multi-script reads and exclusive write locks.
-  - Dependency management handled cleanly via `vcpkg` (`nlohmann-json`).
 
 ---
 
