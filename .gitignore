@@ -1,0 +1,20 @@
+# Build artifacts
+build/
+bin/
+out/
+
+# IDE and editor settings
+.vscode/
+.vs/
+*.user
+
+# vcpkg
+vcpkg_installed/
+
+# OS generated files
+Thumbs.db
+[Dd]esktop.ini
+
+# ...
+~.dev/
+pluginconfig.h
